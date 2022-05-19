@@ -1,0 +1,316 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("FarmerHub") --I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+
+local serv = win:Server("Project Atlanta", "") --I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+
+
+local btns = serv:Channel("General") --I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+
+local btns1 = serv:Channel("Auto-Farm")
+local btns2 = serv:Channel("Fun")
+local btns3 = serv:Channel("Admin Dection")
+btns:Button("Open a safe", function()
+    DiscordLib:Notification("Notification", "Teleported to a empty house for a safe, will teleport you back to your last loaction in 15 seconds", "Okay!")
+    local safe = game:GetService("Workspace").Storages.Storage15.ClickDetector
+    fireclickdetector(safe)      
+local currentpos -- make a varible with nothing inside yet?
+function ETC()
+currentpos = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position
+    wait()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1553.95, -3.81196, -843.925)
+    wait(15)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(currentpos)
+end
+ETC()          
+DiscordLib:Notification("Notification", "Opened a safe!", "Okay!")
+end)
+
+
+btns:Button("BarberShop", function()
+DiscordLib:Notification("Notification", "Opened BarberShop Gui", "Okay!")
+local BarberShop = game:GetService("Workspace").Barber.ClickPart.ClickDetector
+    fireclickdetector(BarberShop)
+    MaxActivationDistance = 99999
+end)
+
+
+btns:Button("DesignerStore", function()
+    DiscordLib:Notification("Notification", "Opened DesignerStore Gui", "Okay!")
+    local DesignerStore = game:GetService("Workspace").DesignerStore.ClickPart.ClickDetector
+        fireclickdetector(DesignerStore)
+    end)
+
+
+btns:Button("LuxryStore", function()
+    DiscordLib:Notification("Notification", "Opened LuxryStore Gui", "Okay!")
+    local DesignerStore = game:GetService("Workspace").LuxuryStore.ClickPart.ClickDetector
+        fireclickdetector(DesignerStore)
+    end)
+
+
+ btns1:Button("Start AutoFarm", function()
+        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)
+        DiscordLib:Notification("Notification", "Started AutoFarm, Please turn on Admin Detection!!!!", "Okay!")
+        while true do
+                wait()
+                local loaction1 = game:GetService("Workspace").Restocking.Black.ProximityPrompt 
+                local loaction2 = game:GetService("Workspace").Restocking.White.ProximityPrompt
+                local loaction = game:GetService("Workspace").Restocking.Part.ProximityPrompt
+                local loaction3 = game:GetService("Workspace").Restocking.Grey.ProximityPrompt
+                local loaction4 = game:GetService("Workspace").Restocking.Green.ProximityPrompt
+                local loaction5 = game:GetService("Workspace").Restocking.Purple.ProximityPrompt
+                local loaction6 = game:GetService("Workspace").Restocking.Blue.ProximityPrompt
+                local loaction7 = game:GetService("Workspace").Restocking.Pink.ProximityPrompt
+                local loaction8 = game:GetService("Workspace").Restocking.Red.ProximityPrompt
+                local loaction9 = game:GetService("Workspace").Restocking.Orange.ProximityPrompt
+                local loaction0 = game:GetService("Workspace").Restocking.Brown.ProximityPrompt
+                fireproximityprompt(loaction)
+                local plr = game.Players.LocalPlayer
+                local black = plr.Backpack:FindFirstChild("Black")
+                local White = plr.Backpack:FindFirstChild("White")
+                local Grey = plr.Backpack:FindFirstChild("Grey")   --I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+
+                local Green = plr.Backpack:FindFirstChild("Green")
+                local Purple = plr.Backpack:FindFirstChild("Purple")
+                local Blue = plr.Backpack:FindFirstChild("Blue")
+                local Pink = plr.Backpack:FindFirstChild("Pink")
+                local Red = plr.Backpack:FindFirstChild("Red")
+                local Brown = plr.Backpack:FindFirstChild("Brown")
+                local Orange = plr.Backpack:FindFirstChild("Orange")
+
+            if black then
+                Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-217.459, 18.5427, -153.339)
+                fireproximityprompt(loaction1)
+                wait(1.5)
+                Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)
+            elseif White then  --I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+                Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-217.81, 18.5427, -133.237)
+                fireproximityprompt(loaction2)
+                wait(1.5)
+                Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)
+            elseif Grey then
+                Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-203.967, 18.5427, -132.996)
+                fireproximityprompt(loaction3)
+                wait(1.5)
+                Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)
+            elseif Green then
+                    Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-203.616, 18.5427, -153.098)
+                    fireproximityprompt(loaction4)
+                    wait(1.5)
+                    Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)
+            elseif Purple then
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-231.794, 18.5427, -132.424)
+                        fireproximityprompt(loaction5)
+                        wait(1.5)
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94) 
+            elseif Blue then
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-231.436, 18.5427, -152.933)
+                        fireproximityprompt(loaction6)
+                        wait(1.5)
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94) 
+            elseif Pink then
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-254.319, 18.5427, -132.817)
+                        fireproximityprompt(loaction7)
+                        wait(1.5)
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94) 
+            elseif Red then
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-253.961, 18.5427, -153.326)
+                        fireproximityprompt(loaction8)
+                        wait(1.5)
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)  
+            elseif Orange then
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-268.308, 18.5427, -133.061)
+                        fireproximityprompt(loaction9)
+                        wait(1.5)
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)  
+            elseif Brown then
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-267.95, 18.5427, -153.57)
+                        fireproximityprompt(loaction0)
+                        wait(1.5)
+                        Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)                                                                                                                                            
+            end
+            end
+        end)
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+
+btns1:Button("Stop Auto-Farm", function()
+    DiscordLib:Notification("Notification", "Stopped Auto-Farm", "Okay!")
+local plr = game.Players.LocalPlayer
+local hum = plr.Character.Humanoid
+hum.Health = 0
+    end)        
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+
+btns2:Button("Slient Aim", function()
+    --NOT MINES
+    DiscordLib:Notification("Notification", "Slient Aim", "Okay!")
+    local mt = getrawmetatable(game)
+    local backupindex = mt.__index
+    local ValiantAimHacks = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Experimental%20Silent%20Aim%20Module.lua"))()
+    ValiantAimHacks["TeamCheck"] = false
+    setreadonly(mt, false)
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+
+    mt.__index = newcclosure(function(t, k)
+        if t:IsA("Mouse") and (k == "Hit" or k == "Target") then
+            if ValiantAimHacks.checkSilentAim() then
+                local CPlayer = rawget(ValiantAimHacks, "Selected")
+                if CPlayer and CPlayer.Character and CPlayer.Character.FindFirstChild(CPlayer.Character, "Head") then
+                    return (k == "Hit" and CPlayer.Character.Head.CFrame or CPlayer.Character.Head)
+                end
+            end
+        end
+        return backupindex(t, k)
+    end)
+    setreadonly(mt, true)
+    end)        
+btns2:Button("Safe Mode", function()
+        local plr = game.Players.LocalPlayer
+        local hum = plr.Character.Humanoid
+        local lowhealth = hum.Health
+        if lowhealth == 100 then
+            print("Your safe")
+        elseif lowhealth <=	 50 then
+            Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-37.9483, 3.6255, 29.6036)
+            DiscordLib:Notification("Notification", "Teleported to Safety", "Thank you!")
+        end
+        end)        
+btns2:Button("Inf zoom", function()
+        game.Players.LocalPlayer.CameraMaxZoomDistance = 1000000
+        end)       
+btns2:Button("Buy a bandage", function()
+        local args = {
+    [1] = "Store",
+    [2] = game:GetService("ReplicatedStorage").Store.Bandage
+}
+
+game:GetService("ReplicatedStorage").Remotes.Store:FireServer(unpack(args))
+
+        end)  
+btns2:Button("Destory NameTag", function()
+    local character = game.Players.LocalPlayer.character
+    if character.Head:FindFirstChild("NameTag") then
+        character.Head.NameTag:Destroy()
+    end
+        end)          
+btns2:Button("Infinite Yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        end)                
+btns3:Button("Admin Dectection!", function()
+    DiscordLib:Notification("Notification", "Turned on Admin Detection will kick you whenever a admin joins the game!", "Okay!")    
+local player1 = game.Players.LocalPlayer
+local p1 = game.Workspace:FindFirstChild("NokOrNoc")
+local p2 = game.Workspace:FindFirstChild("LimePlayzRBLX")
+local p3 = game.Workspace:FindFirstChild("Paradoxiliuss")
+local p4 = game.Workspace:FindFirstChild("TampaStateHolder")
+local p5 = game.Workspace:FindFirstChild("eleusinq")
+local p6 = game.Workspace:FindFirstChild("Die1Umeret")
+local p7 = game.Workspace:FindFirstChild("Frank_Hartigan")
+local p8 = game.Workspace:FindFirstChild("LOYBreezy")
+local p9 = game.Workspace:FindFirstChild("mil_waukee")
+local p10 = game.Workspace:FindFirstChild("Jvhkobe")
+local p11 = game.Workspace:FindFirstChild("rezzki_YT")
+local p12 = game.Workspace:FindFirstChild("tuffcool1")
+local p13 = game.Workspace:FindFirstChild("TheGrandOldParty")
+while true do
+   wait()
+    if p1 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+        print("Admin Detected!")
+    elseif p2 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")
+   elseif p3 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")
+   elseif p4 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")
+   elseif p5 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")
+   elseif p6 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")
+   elseif p7 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!") 
+   elseif p8 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")
+   elseif p9 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!") 
+   elseif p10 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")  
+   elseif p11 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")
+   elseif p12 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")
+   elseif p13 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")                             
+end
+end
+        end)       
+
+
+local textbs = serv:Channel("Spam Chat")
+
+textbs:Textbox("Spam Chat", "Type here, rejoin to stop!", true, function(t)
+print(t)
+while true do
+    wait()
+    local args = {
+        [1] = t,
+        [2] = "All"
+    }
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+    
+end
+end)
+
+local lbls = serv:Channel("Credits")
+lbls:Label("FarmerWest#6634 made the scripts, dawid#7205 made the UI!")
+lbls:Label("Not my fault if you get caught and banned don't be stupid with this!")
+win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+--I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
+
