@@ -143,6 +143,72 @@ hum.Health = 0
     end)        
 --I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
 
+
+btns2:Button("View other people money", function()
+DiscordLib:Notification("Notification", "Say /e list to view it", "Okay!")   
+local name = game.Players.LocalPlayer.Name
+local l__StarterGui__1 = game:GetService("StarterGui");
+wait();
+l__StarterGui__1:SetCoreGuiEnabled(2, true);
+l__StarterGui__1:SetCore("ResetButtonCallback", false);
+local u1 = { name, "LimePlayzRBLX", "TheGrandOldParty", "eleusinq", "tuffcool1" };
+function Chat(p1, p2)
+	if p2 == "/e list" then
+		local v2 = false;
+		local v3 = #u1;
+		local v4 = 1 - 1;
+		while true do
+			if u1[v4] == p1.Name then
+				v2 = true;
+				break;
+			end;
+			if 0 <= 1 then
+				if v4 < v3 then
+
+				else
+					break;
+				end;
+			elseif v3 < v4 then
+
+			else
+				break;
+			end;
+			v4 = v4 + 1;		
+		end;
+		if v2 == true then
+			local v5 = game.ReplicatedStorage.GameplayUIs.Panel:Clone();
+			v5.Parent = p1.PlayerGui;
+			v5.Enabled = true;
+			local v6, v7, v8 = pairs(game.Players:GetPlayers());
+			while true do
+				local v9, v10 = v6(v7, v8);
+				if v9 then
+
+				else
+					break;
+				end;
+				v8 = v9;
+				local v11 = v5.PlrName:Clone();
+				v11.Parent = v5.PanelFrame.Players;
+				v11.Name = v10.Name;
+				v11.PlrName.Text = v10.Name .. " / " .. v10.PlrData.FName.Value .. " " .. v10.PlrData.LName.Value;
+				v11.Visible = true;
+				v11.Money.Text = "Wallet: " .. v10.PlrData.Wallet.Value .. " Bank: " .. v10.PlrData.Bank.Value;
+				v10.PlrData.Wallet.Changed:Connect(function()
+					if p1.PlayerGui:FindFirstChild("Panel") then
+						v11.Money.Text = "Wallet: " .. v10.PlrData.Wallet.Value .. " Bank: " .. v10.PlrData.Bank.Value;
+					end;
+				end);			
+			end;
+		end;
+	end;
+end;
+local l__LocalPlayer__12 = game.Players.LocalPlayer;
+l__LocalPlayer__12.Chatted:connect(function(p3)
+	Chat(l__LocalPlayer__12, p3);
+end);
+
+        end) 
 btns2:Button("Slient Aim", function()
     --NOT MINES
     DiscordLib:Notification("Notification", "Slient Aim", "Okay!")
