@@ -9,7 +9,8 @@ local btns = serv:Channel("General") --I made this open source on puprose lol, y
 
 local btns1 = serv:Channel("Auto-Farm")
 local btns2 = serv:Channel("Fun")
-local btns3 = serv:Channel("Admin Dection")
+local btns3 = serv:Channel("Admin Detection")
+local btns4 = serv:Channel("Store")
 btns:Button("Open a safe", function()
     DiscordLib:Notification("Notification", "Teleported to a empty house for a safe, will teleport you back to your last loaction in 15 seconds", "Okay!")
     local safe = game:GetService("Workspace").Storages.Storage15.ClickDetector
@@ -82,52 +83,52 @@ btns:Button("LuxryStore", function()
             if black then
                 Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-217.459, 18.5427, -153.339)
                 fireproximityprompt(loaction1)
-                wait(1.5)
+                wait(3)
                 Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)
             elseif White then  --I made this open source on puprose lol, yo if your going skid this at least give me a lil credits or just dm me FarmerWest#6634 and if ur a dev well u found out how to patch
                 Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-217.81, 18.5427, -133.237)
                 fireproximityprompt(loaction2)
-                wait(1.5)
+                wait(3)
                 Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)
             elseif Grey then
                 Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-203.967, 18.5427, -132.996)
                 fireproximityprompt(loaction3)
-                wait(1.5)
+                wait(3)
                 Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)
             elseif Green then
                     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-203.616, 18.5427, -153.098)
                     fireproximityprompt(loaction4)
-                    wait(1.5)
+                    wait(3)
                     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)
             elseif Purple then
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-231.794, 18.5427, -132.424)
                         fireproximityprompt(loaction5)
-                        wait(1.5)
+                        wait(3)
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94) 
             elseif Blue then
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-231.436, 18.5427, -152.933)
                         fireproximityprompt(loaction6)
-                        wait(1.5)
+                        wait(3)
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94) 
             elseif Pink then
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-254.319, 18.5427, -132.817)
                         fireproximityprompt(loaction7)
-                        wait(1.5)
+                        wait(3)
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94) 
             elseif Red then
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-253.961, 18.5427, -153.326)
                         fireproximityprompt(loaction8)
-                        wait(1.5)
+                        wait(3)
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)  
             elseif Orange then
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-268.308, 18.5427, -133.061)
                         fireproximityprompt(loaction9)
-                        wait(1.5)
+                        wait(3)
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)  
             elseif Brown then
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-267.95, 18.5427, -153.57)
                         fireproximityprompt(loaction0)
-                        wait(1.5)
+                        wait(3)
                         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-197.35, 16.7427, -109.94)                                                                                                                                            
             end
             end
@@ -179,15 +180,6 @@ btns2:Button("Safe Mode", function()
 btns2:Button("Inf zoom", function()
         game.Players.LocalPlayer.CameraMaxZoomDistance = 1000000
         end)       
-btns2:Button("Buy a bandage", function()
-        local args = {
-    [1] = "Store",
-    [2] = game:GetService("ReplicatedStorage").Store.Bandage
-}
-
-game:GetService("ReplicatedStorage").Remotes.Store:FireServer(unpack(args))
-
-        end)  
 btns2:Button("Destory NameTag", function()
     local character = game.Players.LocalPlayer.character
     if character.Head:FindFirstChild("NameTag") then
@@ -213,6 +205,8 @@ local p10 = game.Workspace:FindFirstChild("Jvhkobe")
 local p11 = game.Workspace:FindFirstChild("rezzki_YT")
 local p12 = game.Workspace:FindFirstChild("tuffcool1")
 local p13 = game.Workspace:FindFirstChild("TheGrandOldParty")
+local p14 = game.Workspace:FindFirstChild("faawick")
+
 while true do
    wait()
     if p1 then
@@ -253,11 +247,49 @@ while true do
        print("Admin Detected!")
    elseif p13 then
        player1:Kick("Admin Detected, disconnted please find another server")
-       print("Admin Detected!")                             
+       print("Admin Detected!")
+    elseif p14 then
+       player1:Kick("Admin Detected, disconnted please find another server")
+       print("Admin Detected!")                                  
 end
 end
         end)       
+btns4:Button("Buy a bandage", function()
+        local args = {
+    [1] = "Store",
+    [2] = game:GetService("ReplicatedStorage").Store.Bandage
+}
+game:GetService("ReplicatedStorage").Remotes.Store:FireServer(unpack(args))
 
+end)  
+btns4:Button("Buy Dice", function()
+    local args = {
+        [1] = "Store",
+        [2] = game:GetService("ReplicatedStorage").Store.Dice
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Store:FireServer(unpack(args))
+    
+end) 
+btns4:Button("Buy Dice", function()
+    local args = {
+        [1] = "Store",
+        [2] = game:GetService("ReplicatedStorage").Store.Dice
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Store:FireServer(unpack(args))
+    
+end) 
+
+btns4:Button("Black durag", function()
+    local args = {
+        [1] = "Store",
+        [2] = game:GetService("ReplicatedStorage").Store:FindFirstChild("Black durag")
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Store:FireServer(unpack(args))
+    
+end)  
 
 local textbs = serv:Channel("Spam Chat")
 
